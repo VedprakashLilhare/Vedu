@@ -1,4 +1,4 @@
-package com.ved.mysafety;
+package com.ved.Vedu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.ved.mysafety.R;
 
 public class MainActivity extends AppCompatActivity {
     ImageView c1,c2,l1,l2,l3;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         c2.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this,help.class);
+            Intent intent = new Intent(MainActivity.this,SoS.class);
             startActivity(intent);
         });
 

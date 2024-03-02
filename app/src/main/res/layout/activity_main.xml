@@ -21,8 +21,7 @@
         app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375"
-        android:contentDescription="@string/un_safety" />
+        app:layout_constraintVertical_bias="0.375" />
 
     <TextView
         android:id="@+id/textView7"
@@ -31,7 +30,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="52dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/un_safety"
+        android:text="Vigilance Emergency Deployment Unit"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
@@ -106,19 +105,19 @@
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="64dp"
-                    android:layout_height="53dp"
+                    android:layout_width="65dp"
+                    android:layout_height="57dp"
                     android:layout_marginStart="45dp"
                     android:layout_marginTop="20dp"
-                    android:src="@drawable/img_1" />
+                    android:src="@drawable/img_4" />
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="90dp"
-                    android:text="@string/help_to_police"
+                    android:text="@string/make_sos"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>

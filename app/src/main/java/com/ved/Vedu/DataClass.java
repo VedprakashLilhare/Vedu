@@ -1,4 +1,4 @@
-package com.ved.mysafety;
+package com.ved.Vedu;
 
 public class DataClass {
     private String dataName;

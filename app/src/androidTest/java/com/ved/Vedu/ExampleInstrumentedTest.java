@@ -1,4 +1,4 @@
-package com.ved.mysafety;
+package com.ved.Vedu;
 
 import android.content.Context;
 

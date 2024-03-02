@@ -11,11 +11,14 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/ico"
-        android:label="SafeWorld"
+        android:label="Vedu"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MySafety">
+        <activity
+            android:name="com.ved.Vedu.SoS"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

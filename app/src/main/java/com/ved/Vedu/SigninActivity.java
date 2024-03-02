@@ -1,4 +1,4 @@
-package com.ved.mysafety;
+package com.ved.Vedu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

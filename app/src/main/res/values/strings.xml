@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Safety</string>
+    <string name="app_name">Vedu</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -10,9 +10,7 @@
     <string name="near_police_station">Near Police Station</string>
     <string name="embassy_helpline">Embassy Helpline</string>
     <string name="emergency_number">Emergency Number</string>
-    <string name="help_to_police">Help to Police</string>
     <string name="register_complaint">Register Complaint</string>
-    <string name="un_safety">UN Safety and Security</string>
     <string name="write_complaint">Write Complaint</string>
     <string name="submit">Submit</string>
     <string name="get_image">Get Image</string>
@@ -25,4 +23,5 @@
     <string name="country">Country:</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="common_embassy_helpline">Common Embassy Helpline</string>
+    <string name="make_sos">Make SOS</string>
 </resources>

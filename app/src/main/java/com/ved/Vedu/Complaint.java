@@ -1,4 +1,4 @@
-package com.ved.mysafety;
+package com.ved.Vedu;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -27,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.ved.mysafety.R;
 
 import java.text.DateFormat;
 import java.util.Calendar;
