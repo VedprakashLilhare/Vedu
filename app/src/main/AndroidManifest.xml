@@ -25,25 +25,26 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".embassy"
+            android:name="com.ved.Vedu.embassy"
             android:exported="false" />
         <activity
-            android:name=".near"
+            android:name="com.ved.Vedu.near"
             android:exported="false" />
         <activity
-            android:name=".number"
+            android:name="com.ved.Vedu.number"
             android:exported="false" />
         <activity
-            android:name=".help"
+            android:name="com.ved.Vedu.SoS"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.ved.Vedu.Complaint"
             android:exported="false" />
         <activity
-            android:name=".Complaint"
+            android:name="com.ved.Vedu.SigninActivity"
             android:exported="false" />
         <activity
-            android:name=".SigninActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignupActivity"
+            android:name="com.ved.Vedu.SignupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,7 +53,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.ved.Vedu.MainActivity"
             android:exported="false" />
     </application>
 
