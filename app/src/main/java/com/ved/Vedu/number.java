@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.ved.mysafety.R;
+
 public class number extends AppCompatActivity {
 
     @Override
