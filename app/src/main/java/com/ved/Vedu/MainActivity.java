@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,near.class);
             startActivity(intent);
         });
-        WebView mywebview = (WebView) findViewById(R.id.webView);
+        WebView mywebview = findViewById(R.id.webView);
         mywebview.loadUrl("https://news.un.org/en/");
 
 
