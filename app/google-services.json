@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "194436847362",
+    "project_id": "my-safety-82fa9",
+    "storage_bucket": "my-safety-82fa9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194436847362:android:e1aea7f676643dc4c6541b",
+        "android_client_info": {
+          "package_name": "com.ved.mysafety"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmtwey3QufkNvhJEaHvJp1HrQ43CAQu_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">My Safety</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="not_yet_registered_sign_up">Not yet registered? Sign Up</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="already_an_user_login">Already an user? Login</string>
+    <string name="near_police_station">Near Police Station</string>
+    <string name="embassy_helpline">Embassy Helpline</string>
+    <string name="emergency_number">Emergency Number</string>
+    <string name="help_to_police">Help to Police</string>
+    <string name="register_complaint">Register Complaint</string>
+    <string name="un_safety">UN Safety and Security</string>
+    <string name="write_complaint">Write Complaint</string>
+    <string name="submit">Submit</string>
+    <string name="get_image">Get Image</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="any_hint_for_police_write_here">Any Hint? For Police write here!</string>
+    <string name="delhi">Delhi</string>
+    <string name="helpline_no">Helpline No.:</string>
+    <string name="country">Country:</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="common_embassy_helpline">Common Embassy Helpline</string>
+</resources>
