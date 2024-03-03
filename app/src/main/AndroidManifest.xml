@@ -17,13 +17,7 @@
         android:theme="@style/Theme.MySafety">
         <activity
             android:name="com.ved.Vedu.SplashScreenActivity"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name="com.ved.Vedu.SoS"
             android:exported="false" />
@@ -45,12 +39,17 @@
             android:name="com.ved.Vedu.Complaint"
             android:exported="false" />
         <activity
-            android:name="com.ved.Vedu.SigninActivity"
-            android:exported="false" />
+            android:name="com.ved.Vedu.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.ved.Vedu.SignupActivity"
-            android:exported="true">
-        </activity>
+            android:exported="false"/>
         <activity
             android:name="com.ved.Vedu.MainActivity"
             android:exported="true" />

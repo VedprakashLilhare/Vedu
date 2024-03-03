@@ -24,4 +24,5 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="common_embassy_helpline">Common Embassy Helpline</string>
     <string name="make_sos">Make SOS</string>
+    <string name="default_web_client_id" />
 </resources>
