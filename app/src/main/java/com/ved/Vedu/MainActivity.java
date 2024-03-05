@@ -1,25 +1,28 @@
 package com.ved.Vedu;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.webkit.WebView;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.ved.mysafety.R;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView c1,c2,l1,l2,l3;
+    CardView c1,c2;
+    ImageView l1,l2,l3;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        c1 = findViewById(R.id.imageView3);
-        c2 = findViewById(R.id.imageView4);
-        l1 =findViewById(R.id.imageView8);
-        l2 =findViewById(R.id.imageView9);
-        l3 =findViewById(R.id.imageView10);
+        c1 = findViewById(R.id.v1);
+        c2 = findViewById(R.id.v2);
+        l1 =findViewById(R.id.b1);
+        l2 =findViewById(R.id.b2);
+        l3 =findViewById(R.id.b3);
 
         c1.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this,Complaint.class);
@@ -45,8 +48,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,near.class);
             startActivity(intent);
         });
-        WebView mywebview = findViewById(R.id.webView);
-        mywebview.loadUrl("https://news.un.org/en/");
 
 
     }
