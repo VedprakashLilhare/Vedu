@@ -4,38 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1D4597"
+    android:background="#A1B7FA"
     app:circularflow_defaultRadius="20dp"
     tools:context="com.ved.Vedu.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="51dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/uni"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
-
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="201dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="11dp"
+        android:layout_width="80dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="16dp"
         android:text="@string/vedu"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColor="#02157C"
         android:textSize="20sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo0" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -76,8 +74,8 @@
                     android:layout_height="42dp"
                     android:layout_marginStart="55dp"
                     android:layout_marginTop="20dp"
-                    android:src="@drawable/img"
-                    android:importantForAccessibility="no" />
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/img" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -106,8 +104,8 @@
                     android:layout_height="57dp"
                     android:layout_marginStart="45dp"
                     android:layout_marginTop="20dp"
-                    android:src="@drawable/img_4"
-                    android:importantForAccessibility="no" />
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/img_4" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -150,8 +148,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="35dp"
                     android:layout_marginTop="40dp"
-                    android:src="@drawable/img_2"
-                    android:importantForAccessibility="no" />
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/img_2" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -166,18 +164,10 @@
                 <ImageView
                     android:id="@+id/b2"
                     android:layout_width="92dp"
-                    android:layout_height="82dp"
-                    android:layout_marginStart="125dp"
-                    android:layout_marginTop="19dp"
-                    android:src="@drawable/circle" />
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="48dp"
-                    android:layout_height="61dp"
-                    android:layout_marginStart="146dp"
-                    android:layout_marginTop="26dp"
-                    android:src="@drawable/embassy" />
+                    android:layout_height="92dp"
+                    android:layout_marginStart="126dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/learn" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -185,7 +175,7 @@
                     android:layout_height="40dp"
                     android:layout_marginStart="130dp"
                     android:layout_marginTop="110dp"
-                    android:text="@string/embassy_helpline"
+                    android:text="Learn from Video"
                     android:textAlignment="center"
                     android:textSize="12sp" />
 
@@ -232,7 +222,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="374dp"
+                android:layout_height="405dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="324dp"
                 android:layout_marginEnd="12dp"
@@ -256,15 +246,6 @@
                     android:textSize="14sp"
                     android:textStyle="bold|italic" />
             </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="@string/made_by_harsh_vedprakash_dunay_madhusudhan"
-                android:textColor="#C8B7B7" />
 
         </LinearLayout>
 

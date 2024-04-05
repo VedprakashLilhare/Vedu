@@ -79,10 +79,10 @@
                 android:layout_marginTop="15dp"
                 android:drawablePadding="8dp"
                 android:hint="@string/address"
+                android:inputType="text"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:inputType="text"
                 tools:ignore="Autofill" />
 
             <LinearLayout
@@ -117,10 +117,10 @@
                 android:layout_marginTop="15dp"
                 android:drawablePadding="8dp"
                 android:hint="@string/write_complaint"
+                android:inputType="text"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:inputType="text"
                 tools:ignore="Autofill" />
 
             <Button
