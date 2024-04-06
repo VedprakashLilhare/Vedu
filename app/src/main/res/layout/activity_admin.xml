@@ -9,7 +9,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="MissingClass">
 
         <TextView
             android:id="@+id/title"
@@ -31,6 +32,15 @@
             android:text="Add User" />
 
         <!-- Upload Video Button -->
+
+        <Button
+            android:id="@+id/ph"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="217dp"
+            android:text="Update phone Number" />
+
         <Button
             android:id="@+id/upload_video_button"
             android:layout_width="165dp"
