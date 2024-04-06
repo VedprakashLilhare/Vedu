@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ved.mysafety.R;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     CardView c1,c2;
@@ -70,9 +75,30 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                    String data=String.valueOf(task.getResult().getValue());
+                    String[] items = data.split(",");
+                    ArrayList<String> listItems = new ArrayList<String>();
+                    for (String item : items) {
+                        String[] idTitle = item.split("=");
+                        listItems.add(idTitle[1].replace("}", ""));
+                    }
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
+                    ListView listView = findViewById(R.id.listviewnotice);
+                    listView.setAdapter(adapter);
+
                 }
             }
         });
+
+    }
+    public String dateconverter(String string){
+        long unixTime = Long.parseLong(string); // Convert string to long
+
+        Date date = new Date(unixTime * 1000L); // Convert Unix time to milliseconds
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy");
+        String formattedDate = sdf.format(date);
+        return formattedDate;
 
     }
     public void signout(View view){
