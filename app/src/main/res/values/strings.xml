@@ -35,4 +35,5 @@
     <string name="vedu">Vedu</string>
     <string name="important_updates">Important Updates</string>
     <string name="learn_from_tutorials">Learn from tutorials</string>
+    <string name="logout">Logout</string>
 </resources>

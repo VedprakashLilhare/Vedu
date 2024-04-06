@@ -16,8 +16,7 @@ import com.ved.mysafety.R;
 
 public class SignupActivity extends AppCompatActivity {
 
-    EditText signupName, signupUsername, signupEmail, signupPassword;
-    TextView loginRedirectText;
+    EditText signupName, signupEmail, signupPassword;
     Button signupButton;
     FirebaseDatabase database;
     DatabaseReference reference;
@@ -28,9 +27,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         signupName = findViewById(R.id.signup_name);
         signupEmail = findViewById(R.id.signup_email);
-        signupUsername = findViewById(R.id.signup_username);
         signupPassword = findViewById(R.id.signup_password);
-        loginRedirectText = findViewById(R.id.loginRedirectText);
         signupButton = findViewById(R.id.signup_button);
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,22 +36,13 @@ public class SignupActivity extends AppCompatActivity {
                 reference = database.getReference("users");
                 String name = signupName.getText().toString();
                 String email = signupEmail.getText().toString();
-                String username = signupUsername.getText().toString();
                 String password = signupPassword.getText().toString();
-                HelperClass helperClass = new HelperClass(name, email, username, password);
-                reference.child(username).setValue(helperClass);
-                Toast.makeText(SignupActivity.this, "You have signup successfully!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                HelperClass helperClass = new HelperClass(name, email, password);
+                reference.child(email).setValue(helperClass);
+                Toast.makeText(SignupActivity.this, "You added user successfully!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SignupActivity.this, admin.class);
                 startActivity(intent);
                 finish();
-            }
-        });
-        loginRedirectText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
-                startActivity(intent);
-
             }
         });
     }

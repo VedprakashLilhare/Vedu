@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -54,16 +52,13 @@ public class Complaint extends AppCompatActivity {
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
-                new ActivityResultCallback<ActivityResult>() {
-                    @Override
-                    public void onActivityResult(ActivityResult result) {
-                        if (result.getResultCode() == Activity.RESULT_OK){
-                            Intent data = result.getData();
-                            uri = data.getData();
-                            uploadImage.setImageURI(uri);
-                        } else {
-                            Toast.makeText(Complaint.this, "No Image Selected", Toast.LENGTH_SHORT).show();
-                        }
+                result -> {
+                    if (result.getResultCode() == Activity.RESULT_OK){
+                        Intent data = result.getData();
+                        uri = data.getData();
+                        uploadImage.setImageURI(uri);
+                    } else {
+                        Toast.makeText(Complaint.this, "No Image Selected", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -119,13 +114,10 @@ public class Complaint extends AppCompatActivity {
         // because we will be updating title as well and it may affect child value.
         String currentDate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
         FirebaseDatabase.getInstance().getReference("Complaint List").child(currentDate)
-                .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(Complaint.this, "Submitted", Toast.LENGTH_SHORT).show();
-                            finish();
-                        }
+                .setValue(dataClass).addOnCompleteListener(task -> {
+                    if (task.isSuccessful()){
+                        Toast.makeText(Complaint.this, "Submitted", Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

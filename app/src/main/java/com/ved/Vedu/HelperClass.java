@@ -1,7 +1,7 @@
 package com.ved.Vedu;
-public class HelperClass {
 
-    String name, email, username, password;
+public class HelperClass {
+    String name, email, password;
 
     public String getName() {
         return name;
@@ -19,13 +19,6 @@ public class HelperClass {
         this.email = email;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     public String getPassword() {
         return password;
@@ -35,13 +28,11 @@ public class HelperClass {
         this.password = password;
     }
 
-    public HelperClass(String name, String email, String username, String password) {
+    public HelperClass(String name, String email, String password) {
         this.name = name;
         this.email = email;
-        this.username = username;
         this.password = password;
     }
-
     public HelperClass() {
     }
 }

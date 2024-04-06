@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ved.Vedu.admin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Page"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp" />
+
+        <!-- Add User Button -->
+        <Button
+            android:id="@+id/add_user_button"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="Add User" />
+
+        <!-- Upload Video Button -->
+        <Button
+            android:id="@+id/upload_video_button"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_user_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Upload Video" />
+
+        <!-- Upload Notification Button -->
+        <Button
+            android:id="@+id/upload_notification_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Notification"
+            android:layout_below="@id/upload_video_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

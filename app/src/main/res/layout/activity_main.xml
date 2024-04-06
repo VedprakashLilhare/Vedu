@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A1B7FA"
+    android:background="#FECCCC"
     app:circularflow_defaultRadius="20dp"
     tools:context="com.ved.Vedu.MainActivity">
 
@@ -15,7 +15,7 @@
         android:layout_marginStart="66dp"
         android:layout_marginTop="16dp"
         android:text="@string/vedu"
-        android:textColor="#02157C"
+        android:textColor="#010205"
         android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
@@ -175,7 +175,7 @@
                     android:layout_height="40dp"
                     android:layout_marginStart="130dp"
                     android:layout_marginTop="110dp"
-                    android:text="Learn from Video"
+                    android:text="@string/learn_from_tutorials"
                     android:textAlignment="center"
                     android:textSize="12sp" />
 
@@ -250,4 +250,15 @@
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="signout"
+        android:text="@string/logout"
+        android:textColorLink="#DACCCC"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="5dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
