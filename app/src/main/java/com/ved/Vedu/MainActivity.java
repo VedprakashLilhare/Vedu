@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -70,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                    String data=String.valueOf(task.getResult().getValue());
+                    Toast.makeText(MainActivity.this, data, Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
