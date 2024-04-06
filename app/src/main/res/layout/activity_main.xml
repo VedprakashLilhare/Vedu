@@ -158,6 +158,15 @@
                     android:layout_marginTop="19dp"
                     android:src="@drawable/circle" />
 
+                <ImageView
+                    android:id="@+id/sos"
+                    android:layout_width="76dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="252dp"
+                    android:layout_marginTop="30dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/sos" />
+
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="87dp"
