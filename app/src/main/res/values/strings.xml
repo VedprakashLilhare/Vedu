@@ -36,4 +36,7 @@
     <string name="important_updates">Important Updates</string>
     <string name="learn_from_tutorials">Learn from tutorials</string>
     <string name="logout">Logout</string>
+    <string name="notification_upload">Notification Upload</string>
+    <string name="enter_notification_message">Enter Notification Message</string>
+    <string name="enter_date_dd_mm_yyyy">Enter Date (dd/mm/yyyy)</string>
 </resources>

@@ -27,7 +27,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    CardView c1,c2;
+    CardView c1;
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
     ImageView l1,l2,l3;
