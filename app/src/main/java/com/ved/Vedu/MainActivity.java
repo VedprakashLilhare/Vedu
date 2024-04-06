@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         l3.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this,near.class);
+            Intent intent = new Intent(MainActivity.this,SoS.class);
             startActivity(intent);
         });
         mDatabase.child("org").child("Notice").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {

@@ -164,7 +164,7 @@
                     android:layout_height="36dp"
                     android:layout_marginStart="244dp"
                     android:layout_marginTop="110dp"
-                    android:text="@string/near_police_station"
+                    android:text="@string/make_sos"
                     android:textAlignment="center"
                     android:textSize="12sp" />
 
@@ -223,10 +223,16 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="3dp"
         android:onClick="signout"
         android:text="@string/logout"
         android:textColorLink="#DACCCC"
-        tools:layout_editor_absoluteX="283dp"
-        tools:layout_editor_absoluteY="5dp" />
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
