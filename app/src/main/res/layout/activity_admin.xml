@@ -38,7 +38,9 @@
             android:layout_width="244dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
-            android:layout_marginTop="217dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="222dp"
+            android:layout_marginEnd="87dp"
             android:text="Update phone Number" />
 
         <Button
@@ -53,12 +55,12 @@
         <!-- Upload Notification Button -->
         <Button
             android:id="@+id/upload_notification_button"
-            android:layout_width="wrap_content"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
-            android:text="Upload Notification"
             android:layout_below="@id/upload_video_button"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:text="Upload Notification" />
 
     </RelativeLayout>
 
