@@ -24,7 +24,7 @@
         <!-- Add User Button -->
         <Button
             android:id="@+id/add_user_button"
-            android:layout_width="171dp"
+            android:layout_width="261dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
             android:layout_centerHorizontal="true"
@@ -35,17 +35,17 @@
 
         <Button
             android:id="@+id/ph"
-            android:layout_width="244dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="222dp"
-            android:layout_marginEnd="87dp"
+            android:layout_marginEnd="81dp"
             android:text="Update phone Number" />
 
         <Button
             android:id="@+id/upload_video_button"
-            android:layout_width="165dp"
+            android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/add_user_button"
             android:layout_centerHorizontal="true"
@@ -55,7 +55,7 @@
         <!-- Upload Notification Button -->
         <Button
             android:id="@+id/upload_notification_button"
-            android:layout_width="205dp"
+            android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/upload_video_button"
             android:layout_centerHorizontal="true"
