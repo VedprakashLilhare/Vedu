@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ import com.ved.mysafety.R;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     CardView c1,c2;
@@ -77,12 +79,16 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("firebase", String.valueOf(task.getResult().getValue()));
                     String data=String.valueOf(task.getResult().getValue());
                     String[] items = data.split(",");
-                    ArrayList<String> listItems = new ArrayList<String>();
+                    ArrayList<String> listItems = new ArrayList<>();
+
                     for (String item : items) {
                         String[] idTitle = item.split("=");
-                        listItems.add(idTitle[1].replace("}", ""));
+                        String date = dateConverter(idTitle[0].replace("{", ""));
+                        String notice = idTitle[1].replace("}", "");
+                        listItems.add(date + " - " + notice);
                     }
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, listItems);
+
                     ListView listView = findViewById(R.id.listviewnotice);
                     listView.setAdapter(adapter);
 
@@ -91,15 +97,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    public String dateconverter(String string){
-        long unixTime = Long.parseLong(string); // Convert string to long
-
-        Date date = new Date(unixTime * 1000L); // Convert Unix time to milliseconds
-
-        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy");
-        String formattedDate = sdf.format(date);
-        return formattedDate;
-
+    public String dateConverter(String timestamp) {
+        String trimmedTimestamp = timestamp.trim(); // Remove any leading or trailing whitespace
+        long unixTimestamp = Long.parseLong(trimmedTimestamp);
+        Date date = new Date(unixTimestamp * 1000L); // Convert to milliseconds
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+        return sdf.format(date);
     }
     public void signout(View view){
         FirebaseAuth.getInstance().signOut();
