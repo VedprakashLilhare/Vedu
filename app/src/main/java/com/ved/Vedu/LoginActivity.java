@@ -54,22 +54,35 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
 
                             FirebaseUser user = mAuth.getCurrentUser();
-                            mDatabase.child("users").child(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+
+
+                            mDatabase.child("user").child(user.getUid()).child("type").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                                 @Override
                                 public void onComplete(@NonNull Task<DataSnapshot> task) {
                                     if (!task.isSuccessful()) {
-                                        Log.e("firebase", "Error getting data", task.getException());
 
+                                        Log.e("firebase", "Error getting data", task.getException());
                                     }
                                     else {
                                         Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                                        String data=String.valueOf(task.getResult().getValue());
+                                        if (data.equals("admin")){
+                                            Intent intent = new Intent(LoginActivity.this, admin.class);
+                                            startActivity(intent);
+                                            finish();
+                                        } else if (data.equals("individual")) {
+                                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+
+
+
                                     }
                                 }
-                            });
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
-                            Toast.makeText(LoginActivity.this, "login successfully  ", Toast.LENGTH_SHORT).show();
+                            });                            Toast.makeText(LoginActivity.this, "login successfully  ", Toast.LENGTH_SHORT).show();
+
+
 
                         } else {
                             // If sign in fails, display a message to the user.
@@ -87,10 +100,35 @@ public class LoginActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
+            mDatabase.child("user").child(currentUser.getUid()).child("type").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DataSnapshot> task) {
+                    if (!task.isSuccessful()) {
 
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();        }
+                        Log.e("firebase", "Error getting data", task.getException());
+                    }
+                    else {
+                        Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                        String data=String.valueOf(task.getResult().getValue());
+                        if (data.equals("admin")){
+                            Intent intent = new Intent(LoginActivity.this, admin.class);
+                            startActivity(intent);
+                            finish();
+                        } else if (data.equals("individual")) {
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        Toast.makeText(LoginActivity.this, data, Toast.LENGTH_SHORT).show();
+
+
+
+
+                    }
+                }
+            });                            Toast.makeText(LoginActivity.this, "login successfully  ", Toast.LENGTH_SHORT).show();
+
+                   }
     }
 
 }
