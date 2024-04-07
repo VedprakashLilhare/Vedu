@@ -2,6 +2,7 @@ package com.ved.Vedu;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.ved.mysafety.R;
 
 public class admin extends AppCompatActivity {
@@ -40,5 +42,12 @@ public class admin extends AppCompatActivity {
 //            Intent intent = new Intent(admin.this,SignupActivity.class);
 //            startActivity(intent);
 //        });
+    }
+    public void signout(View view){
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(admin.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+
     }
 }
