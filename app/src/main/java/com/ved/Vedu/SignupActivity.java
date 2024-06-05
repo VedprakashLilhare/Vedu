@@ -67,9 +67,7 @@ public class SignupActivity extends AppCompatActivity {
                                     mDatabase.child("user").child(user.getUid()).child("username").setValue(name);
 
                                     Toast.makeText(SignupActivity.this, "You added user successfully!", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(SignupActivity.this, admin.class);
-                                    startActivity(intent);
-                                    finish();
+
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Log.w(TAG, "createUserWithEmail:failure", task.getException());
