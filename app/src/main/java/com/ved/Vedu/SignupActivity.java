@@ -56,7 +56,7 @@ public class SignupActivity extends AppCompatActivity {
                 String phone = addphone.getText().toString();
                 String password = signupPassword.getText().toString();
                 mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(SignupActivity, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
