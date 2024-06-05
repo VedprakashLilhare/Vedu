@@ -62,6 +62,7 @@ public class SignupActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d(TAG, "createUserWithEmail:success");
+                                    Toast.makeText(SignupActivity.this, "log up secussedful ", Toast.LENGTH_SHORT).show();
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     assert user != null;
                                     mDatabase.child("user").child(user.getUid()).child("username").setValue(name);
