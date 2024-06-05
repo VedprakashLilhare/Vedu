@@ -68,33 +68,33 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,SoS.class);
             startActivity(intent);
         });
-        mDatabase.child("org").child("Notice").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if (!task.isSuccessful()) {
-
-                    Log.e("firebase", "Error getting data", task.getException());
-                }
-                else {
-                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
-                    String data=String.valueOf(task.getResult().getValue());
-                    String[] items = data.split(",");
-                    ArrayList<String> listItems = new ArrayList<>();
-
-                    for (String item : items) {
-                        String[] idTitle = item.split("=");
-                        String date = dateConverter(idTitle[0].replace("{", ""));
-                        String notice = idTitle[1].replace("}", "");
-                        listItems.add(date + " - " + notice);
-                    }
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, listItems);
-
-                    ListView listView = findViewById(R.id.listviewnotice);
-                    listView.setAdapter(adapter);
-
-                }
-            }
-        });
+//        mDatabase.child("org").child("Notice").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<DataSnapshot> task) {
+//                if (!task.isSuccessful()) {
+//
+//                    Log.e("firebase", "Error getting data", task.getException());
+//                }
+//                else {
+//                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+//                    String data=String.valueOf(task.getResult().getValue());
+//                    String[] items = data.split(",");
+//                    ArrayList<String> listItems = new ArrayList<>();
+//
+//                    for (String item : items) {
+//                        String[] idTitle = item.split("=");
+//                        String date = dateConverter(idTitle[0].replace("{", ""));
+//                        String notice = idTitle[1].replace("}", "");
+//                        listItems.add(date + " - " + notice);
+//                    }
+//                    ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, listItems);
+//
+//                    ListView listView = findViewById(R.id.listviewnotice);
+//                    listView.setAdapter(adapter);
+//
+//                }
+//            }
+//        });
 
     }
     public String dateConverter(String timestamp) {
