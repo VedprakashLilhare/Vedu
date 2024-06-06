@@ -53,6 +53,8 @@ dependencies {
     implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation ("com.google.code.gson:gson:2.8.9")
+
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.annotation:annotation:1.7.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
