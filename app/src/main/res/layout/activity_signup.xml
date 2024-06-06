@@ -40,6 +40,7 @@
                 android:drawablePadding="8dp"
                 android:hint="@string/name"
                 android:padding="8dp"
+
                 android:textColor="@color/black" />
 
             <EditText
@@ -49,16 +50,11 @@
                 android:layout_marginTop="20dp"
                 android:drawablePadding="8dp"
                 android:hint="Id."
+                android:inputType="number"
                 android:padding="8dp"
                 android:textColor="@color/black" />
 
-            <Spinner
-                android:id="@+id/spinner1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown" />
+
 
             <EditText
                 android:layout_width="match_parent"

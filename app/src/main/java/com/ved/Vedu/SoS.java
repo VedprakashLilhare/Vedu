@@ -1,5 +1,7 @@
 package com.ved.Vedu;
 
+import static android.content.ContentValues.TAG;
+
 import android.Manifest;
 
 
@@ -10,6 +12,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -25,24 +28,36 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 import com.ved.mysafety.R;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SoS extends AppCompatActivity {
     private LocationManager locationManager;
     private LocationListener locationListener;
+    EditText editTextName, editTextLocation, editTextPhone,editTextRemarks;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        editTextName = findViewById(R.id.editTextName);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        editTextRemarks=findViewById(R.id.editRemarks);
+        editTextLocation = findViewById(R.id.editTextLocation);
+        editTextPhone = findViewById(R.id.editTextPhone);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         DatabaseReference mDatabase;
         FirebaseUser user = mAuth.getCurrentUser();
@@ -170,4 +185,69 @@ public class SoS extends AppCompatActivity {
             }
         }
     }
+    public void senddata(View view){
+        long time= System.currentTimeMillis();
+EditText editTextID=findViewById(R.id.editTextName);
+        EditText phonenumberEdit = findViewById(R.id.editTextPhone);
+        String phonenumber = phonenumberEdit.getText().toString();
+
+        EditText locationEdit = findViewById(R.id.editTextLocation);
+        String livelocation = locationEdit.getText().toString();
+
+        EditText editremark = findViewById(R.id.editRemarks);
+        String remarks = editremark.getText().toString();
+
+        EditText idedit = findViewById(R.id.editTextID);
+        String liveid = idedit.getText().toString();
+
+        Map<String, Object> updates = new HashMap<>();
+        String notice = editTextID.getText().toString();
+
+        updates.put("timestamp", ServerValue.TIMESTAMP);
+        updates.put("Name",notice);
+        updates.put("location",livelocation);
+        updates.put("id",liveid);
+        updates.put("remark",remarks);
+        updates.put("phone",phonenumber);
+
+
+
+        mDatabase.child("org").child("sos").push().setValue(updates);
+        Toast.makeText(this, "Report Sent!", Toast.LENGTH_SHORT).show();
+        finish();
+
+    }
+    public void notice(View view){
+        EditText noticeEditText = findViewById(R.id.editTextName);
+        EditText phonenumberEdit = findViewById(R.id.editTextPhone);
+
+        EditText dateEditText = findViewById(R.id.editTextLocation);
+        String notice = noticeEditText.getText().toString();
+        String phonenumber = phonenumberEdit.getText().toString();
+
+        String date = dateEditText.getText().toString();
+        Map<String, Object> updates = new HashMap<>();
+        updates.put("timestamp", ServerValue.TIMESTAMP);
+        updates.put("notice", notice);
+        updates.put("phone", phonenumber);
+        mDatabase.child("org").child("sos").push().setValue(updates)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        // Display a toast message on success
+                        Toast.makeText(SoS.this, "Data saved successfully.", Toast.LENGTH_SHORT).show();
+
+                        // Reset the EditText value
+                        //   noticeEditText.setText("");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Handle failure
+                        Toast.makeText(SoS.this, "Failed to save data.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
 }

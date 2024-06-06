@@ -38,13 +38,20 @@
             android:hint="Live Location"
             android:layout_below="@id/editTextName"
             android:layout_margin="16dp"/>
+        <EditText
+            android:id="@+id/editRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mention Remarks"
+            android:layout_below="@id/editTextLocation"
+            android:layout_margin="16dp"/>
 
         <EditText
             android:id="@+id/editTextID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ID"
-            android:layout_below="@id/editTextLocation"
+            android:layout_below="@id/editRemarks"
             android:layout_margin="16dp"/>
 
         <EditText
@@ -62,6 +69,7 @@
             android:layout_below="@id/editTextPhone"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="32dp"
+            android:onClick="senddata"
             android:text="Send SOS" />
 
     </RelativeLayout>

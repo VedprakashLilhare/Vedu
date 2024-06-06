@@ -3,7 +3,6 @@ package com.ved.Vedu;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import com.google.gson.*;
 
 import android.util.Log;
 import android.view.View;
@@ -96,20 +95,6 @@ public class MainActivity extends AppCompatActivity {
                     processFirebaseData(task.getResult());
 
 
-//                    String data=String.valueOf(task.getResult().getValue());
-//                    String[] items = data.split(",");
-//                    ArrayList<String> listItems = new ArrayList<>();
-
-//                    for (String item : items) {
-//                        String[] idTitle = item.split("=");
-//                        String date = dateConverter(idTitle[0].replace("{", ""));
-//                        String notice = idTitle[1].replace("}", "");
-//                        listItems.add(date + " - " + notice);
-//                    }
-//                    ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, list);
-//
-//                    ListView listView = findViewById(R.id.listviewnotice);
-//                    listView.setAdapter(adapter);
 
                 }
             }

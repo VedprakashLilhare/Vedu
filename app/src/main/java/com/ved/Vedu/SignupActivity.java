@@ -59,14 +59,15 @@ public class SignupActivity extends AppCompatActivity {
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                Toast.makeText(SignupActivity.this, email, Toast.LENGTH_SHORT).show();
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d(TAG, "createUserWithEmail:success");
-                                    Toast.makeText(SignupActivity.this, "log up secussedful ", Toast.LENGTH_SHORT).show();
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     assert user != null;
                                     mDatabase.child("user").child(user.getUid()).child("name").setValue(name);
-                                    mDatabase.child("user").child(user.getUid()).child("id").setValue(name);
+                                    mDatabase.child("user").child(user.getUid()).child("phone").setValue(phone);
+                                    mDatabase.child("user").child(user.getUid()).child("type").setValue("individual");
 
 
                                     Toast.makeText(SignupActivity.this, "You added user successfully!", Toast.LENGTH_SHORT).show();
