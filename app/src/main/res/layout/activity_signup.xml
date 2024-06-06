@@ -33,14 +33,33 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/signup_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_name"
-                android:layout_marginTop="40dp"
-                android:padding="8dp"
-                android:hint="@string/name"
+                android:layout_marginTop="30dp"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:hint="@string/name"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/id_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:hint="Id."
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:outlineSpotShadowColor="#F1ECEC"
+                android:spinnerMode="dropdown" />
 
             <EditText
                 android:layout_width="match_parent"
