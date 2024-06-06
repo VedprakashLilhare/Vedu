@@ -116,12 +116,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    public String dateConverter(String timestamp) {
-        String trimmedTimestamp = timestamp.trim(); // Remove any leading or trailing whitespace
-        long unixTimestamp = Long.parseLong(trimmedTimestamp);
-        Date date = new Date(unixTimestamp * 1000L); // Convert to milliseconds
-        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-        return sdf.format(date);
+    public String dateConverter(Long timestamp) {
+        Date date = new Date(timestamp);
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        return formatter.format(date);
     }
     public void signout(View view){
         FirebaseAuth.getInstance().signOut();
@@ -138,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                     Map<String, Object> noticeData = entry.getValue();
                     long timestamp = (long) noticeData.get("timestamp");
                     String notice = (String) noticeData.get("notice");
-                    String listItem =  dateConverter(String.valueOf(timestamp) )+" " +  notice;
+                    String listItem =  dateConverter(timestamp)+" " +  notice;
                     listItems.add(listItem);
                 }
                 adapter.notifyDataSetChanged();
