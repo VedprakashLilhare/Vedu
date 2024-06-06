@@ -58,7 +58,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@android:drawable/btn_dropdown"
-                android:outlineSpotShadowColor="#F1ECEC"
                 android:spinnerMode="dropdown" />
 
             <EditText
