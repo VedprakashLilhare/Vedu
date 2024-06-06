@@ -39,17 +39,5 @@
     <string name="notification_upload">Notification Upload</string>
     <string name="enter_notification_message">Enter Notification Message</string>
     <string name="enter_date_dd_mm_yyyy">Enter Date (dd/mm/yyyy)</string>
-    <resources>
-        <string-array name="planets_array">
-            <item>Mercury</item>
-            <item>Venus</item>
-            <item>Earth</item>
-            <item>Mars</item>
-            <item>Jupiter</item>
-            <item>Saturn</item>
-            <item>Uranus</item>
-            <item>Neptune</item>
-        </string-array>
-    </resources>
 
 </resources>
