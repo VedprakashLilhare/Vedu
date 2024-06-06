@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".embassy">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView"
@@ -52,18 +51,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView1"
-                        android:text="@string/country"
+                        android:text="Management team"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170dp"
-                        android:text="India"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
+
 
                     <TextView
                         android:id="@+id/Helpline1"
@@ -72,47 +65,18 @@
                         android:layout_below="@id/country1"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView1"
-                        android:text="Police No."
+                        android:text="Contact No:\n 123456789"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="28dp"
-                        android:text="100"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/email1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/Helpline1"
-                        android:layout_marginStart="10dp"
-                        android:layout_toEndOf="@id/imageView1"
-                        android:text="Ambulance"
-                        android:textColor="@color/lavender"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="55dp"
-                        android:text="181"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
 
                     <ImageView
                         android:id="@+id/imageView1"
                         android:layout_width="80dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="25dp"
-                        android:src="@drawable/india" />
+                        android:src="@drawable/img_1" />
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
@@ -133,19 +97,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView2"
-                        android:text="@string/country"
+                        android:text="Guard"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:ignore="DuplicateIds" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170dp"
-                        android:text="America"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/Helpline2"
@@ -154,48 +111,18 @@
                         android:layout_below="@id/country2"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView2"
-                        android:text="Police No."
+                        android:text="Contact No:\n 123456789"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:ignore="DuplicateIds" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="28dp"
-                        android:text="12345"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/email2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/Helpline2"
-                        android:layout_marginStart="10dp"
-                        android:layout_toEndOf="@id/imageView2"
-                        android:text="Ambulance"
-                        android:textColor="@color/lavender"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="DuplicateIds" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="55dp"
-                        android:text="101"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
 
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/ami"
+                        android:src="@drawable/img_4"
                         tools:ignore="DuplicateIds" />
                 </RelativeLayout>
 
@@ -217,20 +144,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView3"
-                        android:text="@string/country"
+                        android:text="Firebrigad"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:ignore="DuplicateIds" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170dp"
-                        android:text="Japan"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        tools:ignore="DuplicateIds" />
 
                     <TextView
                         android:id="@+id/Helpline"
@@ -239,48 +158,17 @@
                         android:layout_below="@id/country3"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView3"
-                        android:text="Police No."
+                        android:text="Contact No:\n 123456789"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:ignore="DuplicateIds" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="28dp"
-                        android:text="12345"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/email3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/Helpline"
-                        android:layout_marginStart="10dp"
-                        android:layout_toEndOf="@id/imageView3"
-                        android:text="Ambulance"
-                        android:textColor="@color/lavender"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="DuplicateIds" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="55dp"
-                        android:text="102"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
 
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/japan"
+                        android:src="@drawable/img_5"
                         tools:ignore="DuplicateIds" />
                 </RelativeLayout>
 
@@ -302,20 +190,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView4"
-                        android:text="@string/country"
+                        android:text="Person1"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:ignore="DuplicateIds" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170dp"
-                        android:text="Brazil"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        tools:ignore="DuplicateIds" />
+
 
                     <TextView
                         android:id="@+id/Helpline4"
@@ -324,48 +205,17 @@
                         android:layout_below="@id/country4"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView4"
-                        android:text="Police No."
+                        android:text="Contact No:\n 123456789"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:ignore="DuplicateIds" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="28dp"
-                        android:text="12345"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/email4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/Helpline4"
-                        android:layout_marginStart="10dp"
-                        android:layout_toEndOf="@id/imageView4"
-                        android:text="Ambulance"
-                        android:textColor="@color/lavender"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="DuplicateIds" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="55dp"
-                        android:text="103"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
 
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/brazil"
+                        android:src="@drawable/img_6"
                         tools:ignore="DuplicateIds" />
                 </RelativeLayout>
 
@@ -387,20 +237,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView5"
-                        android:text="@string/country"
+                        android:text="Person2"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:ignore="DuplicateIds" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170dp"
-                        android:text="Colombia"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        tools:ignore="DuplicateIds" />
 
                     <TextView
                         android:id="@+id/Helpline5"
@@ -409,48 +251,17 @@
                         android:layout_below="@id/country5"
                         android:layout_marginStart="10dp"
                         android:layout_toEndOf="@id/imageView5"
-                        android:text="Police No."
+                        android:text="Contact No:\n 123456789"
                         android:textColor="@color/lavender"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:ignore="DuplicateIds" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="28dp"
-                        android:text="12345"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/email5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/Helpline5"
-                        android:layout_marginStart="10dp"
-                        android:layout_toEndOf="@id/imageView5"
-                        android:text="Ambulance"
-                        android:textColor="@color/lavender"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="DuplicateIds" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="55dp"
-                        android:text="104"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
 
                     <ImageView
                         android:id="@+id/imageView5"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/colombia"
+                        android:src="@drawable/img_6"
                         tools:ignore="DuplicateIds" />
                 </RelativeLayout>
 
