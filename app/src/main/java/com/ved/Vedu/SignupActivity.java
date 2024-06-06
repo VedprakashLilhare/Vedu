@@ -65,7 +65,9 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "log up secussedful ", Toast.LENGTH_SHORT).show();
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     assert user != null;
-                                    mDatabase.child("user").child(user.getUid()).child("username").setValue(name);
+                                    mDatabase.child("user").child(user.getUid()).child("name").setValue(name);
+                                    mDatabase.child("user").child(user.getUid()).child("id").setValue(name);
+
 
                                     Toast.makeText(SignupActivity.this, "You added user successfully!", Toast.LENGTH_SHORT).show();
 
@@ -78,8 +80,7 @@ public class SignupActivity extends AppCompatActivity {
                                 }
                             }
                         });
-                HelperClass helperClass = new HelperClass(name, email,phone, password);
-                reference.child(email).setValue(helperClass);
+
 
             }
         });
